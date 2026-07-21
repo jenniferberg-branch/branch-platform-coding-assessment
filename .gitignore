@@ -20,7 +20,7 @@ target/
 *.ipr
 
 ### Maven Properties ###
-.mvn
+.mvn/
 mvnw
 mvnw.cmd
 
