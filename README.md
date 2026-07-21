@@ -1,6 +1,12 @@
 # Branch Interview Assessment - Jennifer Berg
 
 This is a Spring Boot service that fetches a GitHub user's profile and repositories and returns them as a single JSON response.
+The service follows a classic Spring MVC architecture. In detail:
+- Controller layer:  Defines the GET REST endpoint and returns responses
+- Service layer:  Calls the GitHub endpoints to retrieve the user information and repos and then merges them into one payload
+- Model layer:  Response DTOs. Utilizes @JsonAlias when needed in order to map GitHub field names into the specified API field names
+- Config layer:  Builds the RestClient with the GitHub users base URL
+- ExceptionHandler layer:  Translates exceptions into consistent error responses
 
 ## Prerequisites
 
